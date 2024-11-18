@@ -6,6 +6,9 @@ use aiken/primitive/int
 use modules/functions
 
 test property_test_bool(b via fuzz.bool()) {
+  // `?` (trace-if-false) Operator
+  // https://aiken-lang.org/language-tour/troubleshooting#-operator
+  // this will print a trace only if the condition is False
   (b || !b)?
 }
 

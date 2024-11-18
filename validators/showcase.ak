@@ -7,8 +7,9 @@ use cardano/transaction.{OutputReference, Transaction}
 
 validator no_param {
   mint(redeemer: Int, policy_id _policy_id: PolicyId, tx _tx: Transaction) {
-    // `?` Operator
+    // `?` (trace-if-false) Operator
     // https://aiken-lang.org/language-tour/troubleshooting#-operator
+    // this will print a trace only if the condition is False
     (redeemer == 42)?
   }
 
@@ -18,7 +19,7 @@ validator no_param {
     utxo _utxo: OutputReference,
     tx _tx: Transaction,
   ) {
-    // Pattern Matching
+    // Pattern Matching (when-is)
     // https://aiken-lang.org/language-tour/custom-types#pattern-matching
     // think of it like `switch-case` in other programming languages
     when datum is {
