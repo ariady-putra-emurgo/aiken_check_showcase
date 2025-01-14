@@ -1,4 +1,7 @@
+//// @hidden
+
 use modules/functions
+use test_kit.{print}
 
 test unit_test_1() {
   // `and` Block
@@ -18,4 +21,19 @@ test unit_test_2() {
     functions.is_even(2),
     !functions.is_even(3),
   }
+}
+
+// ## Troubleshooting
+// https://aiken-lang.org/language-tour/troubleshooting
+
+test traces() {
+  // Traces
+  // https://aiken-lang.org/language-tour/troubleshooting#traces
+  trace @"Debug": 123
+  True
+}
+
+test prints() {
+  // use test_kit.{print}
+  print("Debug", 123)
 }

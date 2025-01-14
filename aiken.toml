@@ -1,6 +1,6 @@
 name = "ariady-putra-emurgo/aiken_check_showcase"
 version = "0.0.0"
-compiler = "v1.1.6"
+compiler = "v1.1.9"
 plutus = "v3"
 license = "Apache-2.0"
 description = "Aiken contracts for project 'ariady-putra-emurgo/aiken_check_showcase'"
@@ -12,12 +12,17 @@ platform = "github"
 
 [[dependencies]]
 name = "aiken-lang/stdlib"
-version = "v2.1.0"
+version = "v2.2.0"
 source = "github"
 
 [[dependencies]]
 name = "aiken-lang/fuzz"
 version = "v2.1.0"
+source = "github"
+
+[[dependencies]]
+name = "aiken-extra/test_kit"
+version = "38b51061c36bd0fc082f3df89ae2ddf38a385478"
 source = "github"
 
 [config]
